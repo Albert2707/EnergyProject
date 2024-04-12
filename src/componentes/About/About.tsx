@@ -26,7 +26,6 @@ const About = () => {
             },
         },
     };
-    console.log(y)
     return (
         <section className="about">
 
