@@ -1,0 +1,52 @@
+@import "../../index.scss";
+
+.team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $orange;
+
+    .container {
+        margin: 0 auto;
+
+        .wrapper {
+            display: flex;
+            gap: 50px;
+
+            .card {
+                height: 450px;
+                box-shadow: 25px 16px #222;
+                width: 350px;
+                overflow: hidden;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+
+                .image {
+                    flex: 1;
+                    height: 80%;
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        ;
+                        object-fit: cover;
+                    }
+                }
+
+                .memberInfo {
+                    display: flex;
+                    align-items: center;
+                    height: 20%;
+                    flex-direction: column;
+
+                    .top{
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+            }
+        }
+    }
+}

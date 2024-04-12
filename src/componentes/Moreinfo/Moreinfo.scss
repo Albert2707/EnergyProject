@@ -1,0 +1,101 @@
+@import "../../index.scss";
+
+.Moreinfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    margin: auto;
+
+    .wrapper {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+
+
+        .card {
+            width: 350px;
+            height: 200px;
+            border-radius: 5px;
+            background-color: white;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+            .logo {
+
+                width: 70px;
+                height: 70px;
+                display: flex;
+                justify-content: center;
+                background-color: #f6f6f6;
+                align-items: center;
+                border-radius: 50%;
+                position: absolute;
+                top: -40px;
+
+                svg {
+                    width: 28px;
+                    color: $orange;
+                    height: 28px;
+                }
+            }
+
+            .info {
+                display: flex;
+                width: 100%;
+                align-items: center;
+                text-wrap: pretty;
+                justify-content: center;
+                gap: 5px;
+                font-weight: medium;
+                font-size: 1.2rem;
+                overflow: hidden;
+
+                p {
+                    width: 300px;
+                }
+
+                span {
+                    font-weight: bold;
+                    color: $orange;
+                }
+
+            }
+
+            .covid {
+                position: absolute;
+                bottom: 5px;
+                display: flex;
+                right: 10px;
+                align-items: center;
+                justify-content: center;
+                font-size: 0.65rem;
+                font-weight: 500;
+                background-color: #f7f7f7;
+                border-radius: 10px;
+                padding: 5px 10px;
+                text-transform: uppercase;
+            }
+
+        }
+
+        .card:nth-child(even) {
+            height: 250px;
+
+            .info {
+                p {
+                    font-size: 1.3rem;
+                    font-weight: 400;
+                    width: 300px;
+                }
+                
+            }
+        }
+    }
+}

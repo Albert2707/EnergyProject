@@ -1,0 +1,54 @@
+@import "../../index.scss";
+
+nav {
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    background-color: white;
+    z-index:100;
+    top:0;
+.reds{
+    padding:10px 0;
+    background-color: #f6f6f6;
+    border-radius: 10px;
+}
+    .container {
+        @include container();
+        margin: auto;
+
+        .wrapper {
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+
+            .logo {
+                svg {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+
+            .links {
+                display: flex;
+                gap: 20px;
+                align-items: center;
+
+                a {
+                    text-decoration: none;
+                    color: #222;
+                    font-weight: 500;
+                    font-size: 1rem;
+                }
+
+                a:first-child {
+                    border-bottom: 2px solid #F3B33E;
+                }
+            }
+
+        }
+    }
+}
