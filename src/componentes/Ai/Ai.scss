@@ -1,0 +1,31 @@
+.Ai {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+        margin: 0 auto;
+
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 5px;
+
+            .video {
+                flex: 1;
+                overflow: hidden;
+                // border-radius: 10px;
+
+                video {
+                    width: 100%;
+                    border-radius: 10px;
+                }
+            }
+
+            .aiSolutions {
+                flex: 1;
+            }
+        }
+    }
+}
