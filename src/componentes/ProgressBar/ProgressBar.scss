@@ -1,0 +1,21 @@
+@import "../../index.scss";
+
+.progress {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transform-origin: 0%;
+  height: 5px;
+
+  @include laptop {
+    top: 60px;
+    height: 3px;
+  }
+  @include mobile {
+    top: unset;
+    bottom: 0;
+    height: 8px;
+  }
+}
