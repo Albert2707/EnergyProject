@@ -39,13 +39,21 @@ const About = () => {
                     <div className="title">
                         <TypeWriter text="Affordable and Clean Energy" speed={50} />
 
-                        <p className="summary">Ensure access to affordable, reliable, sustainable and modern energy for all
+                        <motion.p initial={{ x: 20, opacity: 0 }} animate={{ opacity: 1, x: 0 }}
+                            transition={{ type: "tween", duration: 0.3, delay: 0.3 }}
 
-                            Goal 7 is about ensuring access to clean and affordable energy, which is key to the development of agriculture, business, communications, education, healthcare and transportation.</p>
-                        <a href="https://sdgs.un.org/es/goals" target="_blank"><span>More</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#F3B33E" >
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                        </svg>
-                        </a>
+                            className="summary">Ensure access to affordable, reliable, sustainable and modern energy for all
+
+                            Goal 7 is about ensuring access to clean and affordable energy, which is key to the development of agriculture, business, communications, education, healthcare and transportation.</motion.p>
+                        <motion.a initial={{ x: -20, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{
+                            type: "spring",
+                            damping: 15,
+                            stiffness: 400,
+                            duration: 0.3,
+                        }} href="https://sdgs.un.org/es/goals" target="_blank"><span>More</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#F3B33E" >
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                            </svg>
+                        </motion.a>
                     </div>
                 </div>
             </div>

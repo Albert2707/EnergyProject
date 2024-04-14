@@ -8,10 +8,10 @@ const Team = () => {
 
   const teamRef = useRef(null);
   const isInView = useInView(teamRef, {
-    amount:"all"
+    amount: "all",
   });
   useEffect(() => {
-    SetsectionChange(isInView ? true : false);
+    SetsectionChange(isInView);
   }, [isInView]);
 
   return (

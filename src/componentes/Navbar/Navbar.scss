@@ -13,11 +13,13 @@ nav {
   @include laptop {
     height: 60px;
   }
+
   .reds {
     padding: 10px 0;
     background-color: #f6f6f6;
     border-radius: 10px;
   }
+
   .container {
     @include container();
     margin: auto;
