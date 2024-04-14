@@ -7,8 +7,11 @@
   line-height: 2.5rem;
   font-weight: 500;
   white-space: normal;
-  margin:0 0 10px 0;
+  margin: 0 0 10px 0;
 
+  @include laptop {
+    font-size: 2.5rem;
+  }
   @include tablet {
     font-size: 2rem;
   }
