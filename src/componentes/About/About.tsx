@@ -1,17 +1,24 @@
 import "./About.scss"
-import { Collection } from '../../assets/Images/Image'
 import { motion, useScroll, useTransform } from "framer-motion"
 import TypeWriter from "../TypeWriter/TypeWriter";
 import { useRef } from "react";
+import { CleanEnergy } from "../../assets/Svg/Svg";
 
 const About = () => {
 
     const arrowRef = useRef(null);
+    const aboutRef = useRef(null);
     const { scrollYProgress } = useScroll({
         target: arrowRef,
         offset: ["start end", "end start"],
     });
+
+    const { scrollYProgress: about } = useScroll({
+        target: aboutRef,
+        offset: ["start start", "end start"],
+    });
     const y = useTransform(scrollYProgress, [0, 1], ["0%", "150%"]);
+    const aboutY = useTransform(about, [0, 1], ["0%", "50%"],)
     const variants = {
         initial: {
             y: 0,
@@ -27,14 +34,14 @@ const About = () => {
         },
     };
     return (
-        <section className="about">
+        <motion.section className="about" style={{ y: aboutY }} ref={aboutRef}>
 
             <div className="container">
                 <div className="wrapper">
 
-                    <div className="left">
-                        <img src={Collection.Wind} alt="" />
-                    </div>
+                    <motion.div initial={{ scale: 0, opacity: 0, y: -10 }} animate={{ scale: 1, y: 0, opacity: 1 }} transition={{}} className="left">
+                        <CleanEnergy />
+                    </motion.div>
 
                     <div className="title">
                         <TypeWriter text="Affordable and Clean Energy" speed={50} />
@@ -69,7 +76,7 @@ const About = () => {
             </motion.div>
 
 
-        </section>
+        </motion.section>
     )
 }
 

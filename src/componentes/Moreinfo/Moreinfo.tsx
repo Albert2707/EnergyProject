@@ -7,11 +7,11 @@ const Moreinfo = () => {
 
   const { scrollYProgress } = useScroll({
     target: showCard1,
-    offset: ["0.7 1", "1 1"]
+    offset: ["0 1", "1 1"]
   })
   const { scrollYProgress:Card2 } = useScroll({
     target: showCard2,
-    offset: ["0.7 1", "1 1"]
+    offset: ["0 1", "1 1"]
   })
 
   const translateCard1 = useTransform(scrollYProgress, [0, 1], [-150,0])

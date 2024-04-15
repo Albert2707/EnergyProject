@@ -8,19 +8,19 @@ const Team = () => {
 
   const teamRef = useRef(null);
   const isInView = useInView(teamRef, {
-    amount: "all",
+    margin: "0px 100px -500px 0px"
   });
   useEffect(() => {
-    SetsectionChange(isInView);
+    SetsectionChange(() => isInView);
   }, [isInView]);
 
   return (
     <section className="team">
-      <div className="container" ref={teamRef}>
+      <div className="container">
         <div className="teamTitle">
           <span>Our Team</span>
         </div>
-        <div className="wrapper">
+        <div className="wrapper" ref={teamRef}>
           <div className="card">
             <div className="image">
               <img

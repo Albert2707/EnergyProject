@@ -2,6 +2,7 @@
 
 .about {
   display: flex;
+  background-color: white;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -12,12 +13,12 @@
     .wrapper {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 20px;
 
       .left {
         flex: 1;
 
-        img {
+        svg {
           width: 800px;
           @include laptop {
             width: 700px;
