@@ -33,16 +33,16 @@
                     flex-direction: column;
 
                     span {
-color:$orange;
-font-weight: 500;
-                        font-size: 1.2rem;
+                        color: $orange;
+                        font-weight:  bold;
+                        font-size: 1.5rem;
                     }
 
                     p {
                         font-size: 1.2rem;
                         text-align: justify;
                         text-wrap: pretty;
-                        color:#555;
+                        color: #555;
                     }
                 }
             }
