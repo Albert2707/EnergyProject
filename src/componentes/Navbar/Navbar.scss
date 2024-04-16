@@ -43,15 +43,21 @@ nav {
         gap: 20px;
         align-items: center;
 
-        a {
+        .link {
           text-decoration: none;
           color: #222;
           font-weight: 500;
           font-size: 1rem;
         }
 
-        a:focus {
-          border-bottom: 2px solid #f3b33e;
+        .goalsLink {
+          text-decoration: none;
+          color: #222;
+          font-weight: 500;
+          font-size: 1rem;
+          padding: 5px;
+          border-radius: 5px;
+          background-color: rgba(128, 128, 128, 0.2);
         }
       }
     }
