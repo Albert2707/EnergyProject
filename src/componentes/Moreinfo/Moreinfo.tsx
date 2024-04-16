@@ -9,15 +9,16 @@ const Moreinfo = () => {
     target: showCard1,
     offset: ["0 1", "1 1"]
   })
-  const { scrollYProgress:Card2 } = useScroll({
+  const { scrollYProgress: Card2 } = useScroll({
     target: showCard2,
     offset: ["0 1", "1 1"]
   })
 
-  const translateCard1 = useTransform(scrollYProgress, [0, 1], [-150,0])
-  const translateCard2 = useTransform(Card2, [0, 1], [150,0])
+  const translateCard1 = useTransform(scrollYProgress, [0, 1], [-150, 0])
+  const translateCard2 = useTransform(Card2, [0, 1], [150, 0])
+
   return (
-    <section className="Moreinfo">
+    <section className="Moreinfo" id="Problem">
       <div className="container">
         <div className="wrapper">
           <motion.div className="card" ref={showCard1} style={{ x: translateCard1 }}>
@@ -65,7 +66,7 @@ const Moreinfo = () => {
             </div>
             <span className="covid">Consequences of the covid-19</span>
           </div>
-          <motion.div className="card" ref={showCard2} style={{x:translateCard2}}>
+          <motion.div className="card" ref={showCard2} style={{ x: translateCard2 }}>
             <div className="logo">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -82,8 +83,7 @@ const Moreinfo = () => {
               </svg>
             </div>
             <div className="info">
-              <span>789</span>
-              <p>million people without electricity</p>
+              <p>More intense effort is needed in reinvigorated energy</p>
             </div>
             <span className="covid">CLEAN ENERGY</span>
           </motion.div>

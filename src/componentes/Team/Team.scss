@@ -96,6 +96,13 @@
           }
         }
       }
+      .card:nth-child(even){
+        .image{
+          img{
+            object-position:0 -50px;
+          }
+        }
+      }
     }
   }
 }

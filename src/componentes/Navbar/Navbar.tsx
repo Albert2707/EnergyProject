@@ -21,10 +21,10 @@ const Navbar = () => {
           </div>
           <div className="links">
             <a href="#about"> About</a>
-            <a href="#about"> Team</a>
-            <a href="#about"> Problem</a>
-            <a href="#about"> AI</a>
-            <a href="#about">Aplication</a>
+            <a href="#Problem"> Problem</a>
+            <a href="#team"> Team</a>
+            <a href="#DeepMind">DeepMind</a>
+            <a href="#outcome">Outcome</a>
           </div>
         </div>
       </div>
