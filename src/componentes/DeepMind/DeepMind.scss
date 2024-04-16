@@ -1,0 +1,53 @@
+@import "../../index.scss";
+
+.container {
+
+    .wrapper {
+        position: relative;
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+        padding: 0 5px;
+
+        .left {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+
+            span {
+                font-size: 3rem;
+                font-weight: 500;
+                text-align: left;
+                text-wrap: pretty;
+
+                @include laptop {
+                    font-size: 2rem;
+                }
+            }
+
+            p {
+                font-size: 1.2rem;
+                text-align: left;
+                text-wrap: pretty;
+            }
+        }
+
+        .right {
+            flex: 1;
+            overflow: hidden;
+
+            img {
+                border-radius: 10px;
+                width: 100%;
+            }
+        }
+
+        .dashedArrow {
+            position: absolute;
+            bottom: -8px;
+            right: 8px;
+        }
+    }
+
+}

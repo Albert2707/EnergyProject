@@ -1,11 +1,17 @@
 @import "../../index.scss";
 .Ai {
+   height:100% !important;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding:100px 0 60px 0;
 
     .container {
         margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:60px;
 
         .wrapper {
             display: flex;

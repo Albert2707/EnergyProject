@@ -34,7 +34,7 @@ const About = () => {
         },
     };
     return (
-        <motion.section className="about" style={{ y: aboutY }} ref={aboutRef}>
+        <motion.section className="about" style={{ y: aboutY }} ref={aboutRef} id="about">
 
             <div className="container">
                 <div className="wrapper">

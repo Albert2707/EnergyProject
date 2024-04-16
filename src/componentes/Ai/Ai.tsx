@@ -1,7 +1,8 @@
+import DeepMind from "../DeepMind/DeepMind"
 import "./Ai.scss"
 const Ai = () => {
     return (
-        <section className="Ai">
+        <section className="Ai" id="DeepMind">
             <div className="container">
                 <div className="wrapper">
                     <div className="video">
@@ -10,14 +11,14 @@ const Ai = () => {
                     </div>
                     {/*Ai solutions*/}
                     <div className="aiSolutions">
-                        <span>Look for possible AIs that can help solve those needs</span>
+                        <span>Look for possible AI that can help solve the need</span>
                         <p>This system uses AI algorithms to analyze real-time data on energy
                             consumption, production, and other factors to optimize energy efficiency and reduce
                             costs.</p>
                     </div>
                 </div>
+                <DeepMind />
             </div>
-
         </section>
     )
 }

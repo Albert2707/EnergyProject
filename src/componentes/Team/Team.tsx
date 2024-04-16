@@ -3,6 +3,7 @@ import "./Team.scss";
 import { useInView } from "framer-motion";
 import { scrollContext } from "../../context/scrollContext";
 import { ContextProps } from "../../context/type";
+import { Collection } from "../../assets/Images/Image";
 const Team = () => {
   const { SetsectionChange } = useContext(scrollContext) as ContextProps;
 
@@ -15,7 +16,7 @@ const Team = () => {
   }, [isInView]);
 
   return (
-    <section className="team">
+    <section className="team" id="team">
       <div className="container">
         <div className="teamTitle">
           <span>Our Team</span>
@@ -24,7 +25,7 @@ const Team = () => {
           <div className="card">
             <div className="image">
               <img
-                src="https://images.pexels.com/photos/20511145/pexels-photo-20511145/free-photo-of-a-woman-with-long-hair-and-a-white-sweater.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                src={Collection.Albert}
                 alt=""
               />
             </div>
@@ -39,7 +40,7 @@ const Team = () => {
           <div className="card">
             <div className="image">
               <img
-                src="https://images.pexels.com/photos/20511145/pexels-photo-20511145/free-photo-of-a-woman-with-long-hair-and-a-white-sweater.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                src={Collection.King}
                 alt=""
               />
             </div>
@@ -54,7 +55,7 @@ const Team = () => {
           <div className="card">
             <div className="image">
               <img
-                src="https://images.pexels.com/photos/20511145/pexels-photo-20511145/free-photo-of-a-woman-with-long-hair-and-a-white-sweater.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                src={Collection.Erick}
                 alt=""
               />
             </div>
@@ -63,7 +64,7 @@ const Team = () => {
                 <span className="memberName">Erick Vásquez</span>
                 <span className="memberId">1122627</span>
               </div>
-              <span className="memberCareer">Software engineering</span>
+              <span className="memberCareer">International Business</span>
             </div>
           </div>
         </div>
