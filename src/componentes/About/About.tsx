@@ -18,7 +18,7 @@ const About = () => {
         offset: ["start start", "end start"],
     });
     const y = useTransform(scrollYProgress, [0, 1], ["0%", "150%"]);
-    const aboutY = useTransform(about, [0, 1], ["0%", "50%"],)
+    const aboutY = useTransform(about, [0, 1], ["0%", "20%"],)
     const variants = {
         initial: {
             y: 0,
