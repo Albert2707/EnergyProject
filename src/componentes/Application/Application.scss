@@ -1,0 +1,33 @@
+@import "../../index.scss";
+
+.Applicationcontainer {
+  @include container();
+  box-shadow: 15px 15px #222;
+  background-color: $orange;
+  padding: 10px 0;
+  border-radius: 10px;
+  .wrapper {
+    width: 80%;
+    margin: 10px auto;
+
+    .application {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      span {
+        background-color: rgba(255 255 255/0.4);
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 1.2rem;
+        text-align: justify;
+        text-wrap: pretty;
+      }
+    }
+  }
+}
