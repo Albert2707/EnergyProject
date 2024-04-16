@@ -29,6 +29,16 @@
           width: 100%;
           border-radius: 10px;
         }
+        .owner {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+
+          .name,
+          .date {
+            color: gray;
+          }
+        }
       }
 
       .aiSolutions {
@@ -50,7 +60,7 @@
     }
     .heart {
       position: absolute;
-      top:65%;
+      top: 65%;
       left: 5px;
     }
   }
