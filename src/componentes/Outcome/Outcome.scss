@@ -1,4 +1,5 @@
 @import "../../index.scss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 .outcome {
     height: auto;
@@ -12,13 +13,49 @@
             display: flex;
             flex-direction: column;
 
-            .video {
-                width: 60%;
-                overflow: hidden;
+            .futureTitle {
+                color: #222;
+                background-color: #f2f2f2;
+                height:40px;
+                display: flex;
+                align-items: center;
+                padding:10px 20px;
+                font-weight: bold;
+                font-size: 2rem;
+                border-radius: 10px;
+                margin: 30px 0;
+                font-family: 'montserrat', sans-serif;
+                line-height: 10px;
+            }
 
-                video {
+            .header {
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0 0 10px 0;
+                width: 60%;
+
+
+                .video {
+
+                    video {
+                        width: 100%;
+                        border-radius: 10px;
+                    }
+
+                }
+
+                .owner {
+                    display: flex;
                     width: 100%;
-                    border-radius: 10px;
+                    justify-content: space-between;
+
+                    .name,
+                    .date {
+                        color: gray;
+                    }
+
                 }
             }
 
@@ -32,10 +69,23 @@
                     display: flex;
                     flex-direction: column;
 
-                    span {
-                        color: $orange;
-                        font-weight:  bold;
-                        font-size: 1.5rem;
+                    .topic {
+                        display: flex;
+                        align-items: center;
+                        justify-content: start;
+
+                        .dot {
+                            svg {
+                                height: 20px;
+                                width: 20px;
+                            }
+                        }
+
+                        span {
+                            color: #444;
+                            font-weight: bold;
+                            font-size: 1.5rem;
+                        }
                     }
 
                     p {
