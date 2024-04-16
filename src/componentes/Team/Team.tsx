@@ -14,13 +14,13 @@ const Team = () => {
 
   const variants = {
     initial: {
-      y: 20,
+      y: 50,
     },
 
     animate: {
       y: 0,
       transition: {
-        duration: 0.2,
+        type: 'spring', damping: 5,stiffness: 20 
       },
     },
   };
