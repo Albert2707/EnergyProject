@@ -1,6 +1,6 @@
 import { useContext, useEffect, useRef } from "react";
 import "./Team.scss";
-import { useInView } from "framer-motion";
+import { useInView, motion } from "framer-motion";
 import { scrollContext } from "../../context/scrollContext";
 import { ContextProps } from "../../context/type";
 import { Collection } from "../../assets/Images/Image";
@@ -9,8 +9,21 @@ const Team = () => {
 
   const teamRef = useRef(null);
   const isInView = useInView(teamRef, {
-    margin: "0px 100px -500px 0px"
+    margin: "0px 100px -500px 0px",
   });
+
+  const variants = {
+    initial: {
+      y: 20,
+    },
+
+    animate: {
+      y: 0,
+      transition: {
+        duration: 0.2,
+      },
+    },
+  };
   useEffect(() => {
     SetsectionChange(() => isInView);
   }, [isInView]);
@@ -21,13 +34,16 @@ const Team = () => {
         <div className="teamTitle">
           <span>Our Team</span>
         </div>
-        <div className="wrapper" ref={teamRef}>
-          <div className="card">
+        <motion.div
+          className="wrapper"
+          ref={teamRef}
+          variants={variants}
+          initial="initial"
+          animate={isInView ? "animate" : "initial"}
+        >
+          <motion.div className="card">
             <div className="image">
-              <img
-                src={Collection.Albert}
-                alt=""
-              />
+              <img src={Collection.Albert} alt="" />
             </div>
             <div className="memberInfo">
               <div className="top">
@@ -36,13 +52,10 @@ const Team = () => {
               </div>
               <span className="memberCareer">Software engineering</span>
             </div>
-          </div>
-          <div className="card">
+          </motion.div>
+          <motion.div className="card">
             <div className="image">
-              <img
-                src={Collection.King}
-                alt=""
-              />
+              <img src={Collection.King} alt="" />
             </div>
             <div className="memberInfo">
               <div className="top">
@@ -51,13 +64,10 @@ const Team = () => {
               </div>
               <span className="memberCareer">System engineering</span>
             </div>
-          </div>
-          <div className="card">
+          </motion.div>
+          <motion.div className="card">
             <div className="image">
-              <img
-                src={Collection.Erick}
-                alt=""
-              />
+              <img src={Collection.Erick} alt="" />
             </div>
             <div className="memberInfo">
               <div className="top">
@@ -66,8 +76,8 @@ const Team = () => {
               </div>
               <span className="memberCareer">International Business</span>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

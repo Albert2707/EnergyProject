@@ -20,12 +20,28 @@ const Navbar = () => {
             </svg>
           </div>
           <div className="links">
-            <a className="link" href="#about"> About</a>
-            <a className="link" href="#Problem"> Problem</a>
-            <a className="link" href="#team"> Team</a>
-            <a className="link" href="#DeepMind">DeepMind</a>
-            <a className="link" href="#outcome">Outcome</a>
-            <a className="goalsLink" href="https://sdgs.un.org/es/goals" target="_blank">Goals</a>
+            <a className="link" href="#about">
+              About
+            </a>
+            <a className="link" href="#Problem">
+              Problem
+            </a>
+            <a className="link" href="#team">
+              Team
+            </a>
+            <a className="link" href="#DeepMind">
+              DeepMind
+            </a>
+            <a className="link" href="#outcome">
+              Outcome
+            </a>
+            <a
+              className="goalsLink"
+              href="https://sdgs.un.org/es/goals"
+              target="_blank"
+            >
+              Goals
+            </a>
           </div>
         </div>
       </div>

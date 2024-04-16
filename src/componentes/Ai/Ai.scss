@@ -1,51 +1,57 @@
 @import "../../index.scss";
 .Ai {
-   height:100% !important;
+  height: 100% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0 60px 0;
+
+  .container {
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
+    position: relative;
+    flex-direction: column;
     align-items: center;
-    padding:100px 0 60px 0;
+    gap: 60px;
 
-    .container {
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap:60px;
+    .wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 5px;
+      gap: 30px;
 
-        .wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0 5px;
-            gap:30px;
+      .video {
+        flex: 1;
+        overflow: hidden;
 
-            .video {
-                flex: 1;
-                overflow: hidden;
-
-                video {
-                    width: 100%;
-                    border-radius: 10px;
-                }
-            }
-
-            .aiSolutions {
-                flex: 1;
-                span{
-                    font-size: 3rem;
-                    font-weight: 500;
-
-                    @include laptop{
-                        font-size: 2rem;
-                    }
-                }
-                p{
-                    font-size: 1.2rem;
-                    text-align: justify;
-                    text-wrap: pretty;
-                }
-            }
+        video {
+          width: 100%;
+          border-radius: 10px;
         }
+      }
+
+      .aiSolutions {
+        flex: 1;
+        span {
+          font-size: 3rem;
+          font-weight: 500;
+
+          @include laptop {
+            font-size: 2rem;
+          }
+        }
+        p {
+          font-size: 1.2rem;
+          text-align: justify;
+          text-wrap: pretty;
+        }
+      }
     }
+    .heart {
+      position: absolute;
+      top:65%;
+      left: 5px;
+    }
+  }
 }
