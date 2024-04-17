@@ -30,6 +30,9 @@ nav {
       justify-content: space-between;
       align-items: center;
       padding: 0 10px;
+      @include mobile{
+        justify-content:center
+      }
 
       .logo {
         svg {
@@ -42,12 +45,28 @@ nav {
         display: flex;
         gap: 20px;
         align-items: center;
+        @include mobile{
+          display:none;
+        }
 
         .link {
-          text-decoration: none;
-          color: #222;
-          font-weight: 500;
-          font-size: 1rem;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          a{
+
+            text-decoration: none;
+            color: #222;
+            font-weight: 500;
+            font-size: 1rem;
+          }
+          .underline{
+            position: absolute ;
+            height: 2px;
+            bottom:-1px;
+            border-radius:5px;
+            width: 100%;
+          }
         }
 
         .goalsLink {

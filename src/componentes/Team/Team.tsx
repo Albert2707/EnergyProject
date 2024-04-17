@@ -20,12 +20,14 @@ const Team = () => {
     animate: {
       y: 0,
       transition: {
-        type: 'spring', damping: 5,stiffness: 20 
+        type: "spring",
+        damping: 5,
+        stiffness: 20,
       },
     },
   };
   useEffect(() => {
-    SetsectionChange(() => isInView);
+    SetsectionChange((prev) => ({ ...prev, team: isInView }));
   }, [isInView]);
 
   return (

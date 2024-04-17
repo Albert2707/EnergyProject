@@ -3,6 +3,14 @@
 .team {
   background-color: $orange;
 
+  @include tablet {
+    height: auto;
+    padding: 50px 0px;
+  }
+  @include mobile {
+    height: auto;
+    padding: 50px 0px;
+  }
   .container {
     margin: 0 auto;
     height: 100%;
@@ -10,6 +18,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include tablet {
+      flex-direction: column;
+    }
+    @include mobile {
+      flex-direction: column;
+    }
 
     .teamTitle {
       position: absolute;
@@ -27,7 +41,17 @@
       padding: 10px;
       top: 80px;
       @include laptop {
-        top:40px;
+        top: 40px;
+      }
+      @include tablet {
+        position: static;
+        top: 0;
+        margin: 10px 0;
+      }
+      @include mobile {
+        position: static;
+        margin: 10px 0;
+        width: 90%;
       }
 
       span {
@@ -36,13 +60,23 @@
         @include laptop {
           font-size: 2rem;
         }
+        @include mobile {
+          font-size: 1.5rem;
+        }
       }
     }
 
     .wrapper {
       display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      flex-direction: row;
       gap: 50px;
 
+      @include mobile {
+        flex-direction: column;
+        transform: none !important;
+      }
       .card {
         height: 450px;
         box-shadow: 25px 16px #222;
@@ -52,6 +86,11 @@
         overflow: hidden;
         flex-direction: column;
 
+        @include mobile {
+          box-shadow: none;
+          height: 400px;
+          width: 90%;
+        }
         .image {
           flex: 1;
           height: 80%;
@@ -96,10 +135,10 @@
           }
         }
       }
-      .card:nth-child(even){
-        .image{
-          img{
-            object-position:0 -50px;
+      .card:nth-child(even) {
+        .image {
+          img {
+            object-position: 0 -50px;
           }
         }
       }

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 export const CleanEnergy = () => {
   return (
     <svg
@@ -555,7 +556,16 @@ export const FunArrow = () => {
 
 export const Heart = () => {
   return (
-    <svg
+    <motion.svg
+      initial={{ scale: 0.6 }}
+      animate={{ scale: 1 }}
+      transition={{
+        duration: 0.5,
+        type: "spring",
+        repeat: Infinity,
+        repeatType: "reverse",
+        stiffness: 150,
+      }}
       className="heart"
       xmlns="http://www.w3.org/2000/svg"
       width="38.67258"
@@ -567,6 +577,6 @@ export const Heart = () => {
         fill="#f50057"
         origin="undraw"
       />
-    </svg>
+    </motion.svg>
   );
 };
