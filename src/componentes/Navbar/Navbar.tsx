@@ -1,5 +1,22 @@
+import { useContext } from "react";
 import "./Navbar.scss";
+import { motion } from "framer-motion";
+import { scrollContext } from "../../context/scrollContext";
+import { ContextProps } from "../../context/type";
 const Navbar = () => {
+  const { sectionChange } = useContext(scrollContext) as ContextProps;
+
+  const variants = {
+    initial: {
+      backgroundColor: "#222",
+      scale: 0,
+    },
+    animate: {
+      backgroundColor: "#f3b33e",
+      scale: 1,
+      transition: {},
+    },
+  };
   return (
     <nav>
       <div className="container">
@@ -20,21 +37,65 @@ const Navbar = () => {
             </svg>
           </div>
           <div className="links">
-            <a className="link" href="#about">
-              About
-            </a>
-            <a className="link" href="#Problem">
-              Problem
-            </a>
-            <a className="link" href="#team">
-              Team
-            </a>
-            <a className="link" href="#DeepMind">
-              DeepMind
-            </a>
-            <a className="link" href="#outcome">
-              Outcome
-            </a>
+            <div className="link">
+              <a className="" href="#about">
+                About
+              </a>
+              <motion.span
+                className="underline"
+                variants={variants}
+                initial="initial"
+                animate={sectionChange.about ? "animate" : "initial"}
+              ></motion.span>
+            </div>
+
+            <div className="link">
+              <a className="" href="#Problem">
+                Problem
+              </a>
+              <motion.span
+                className="underline"
+                variants={variants}
+                initial="initial"
+                animate={sectionChange.problem ? "animate" : "initial"}
+              ></motion.span>
+            </div>
+
+            <div className="link">
+              <a className="" href="#team">
+                Team
+              </a>
+              <motion.span
+                className="underline"
+                variants={variants}
+                initial="initial"
+                animate={sectionChange.team ? "animate" : "initial"}
+              ></motion.span>
+            </div>
+
+            <div className="link">
+              <a className="" href="#DeepMind">
+                DeepMind
+              </a>
+              <motion.span
+                className="underline"
+                variants={variants}
+                initial="initial"
+                animate={sectionChange.deepMind ? "animate" : "initial"}
+              ></motion.span>
+            </div>
+
+            <div className="link">
+              <a className="" href="#outcome">
+                Outcome
+              </a>
+              <motion.span
+                className="underline"
+                variants={variants}
+                initial="initial"
+                animate={sectionChange.outCome ? "animate" : "initial"}
+              ></motion.span>
+            </div>
             <a
               className="goalsLink"
               href="https://sdgs.un.org/es/goals"

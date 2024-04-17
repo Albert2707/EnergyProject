@@ -25,7 +25,7 @@ const ProgressBar = () => {
   return (
     <motion.div
       variants={variants}
-      animate={sectionChange ? "animate" : "initial"}
+      animate={sectionChange.team ? "animate" : "initial"}
       initial="initial"
       style={{ scaleX }}
       className="progress"
